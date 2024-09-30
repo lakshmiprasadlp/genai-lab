@@ -1,15 +1,16 @@
 from langchain_openai import OpenAI
+
+# import prompt template
+from langchain import PromptTemplate
 from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
 import os
 
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-llm=OpenAI(temperature=0.9,api_key=api_key)
-
 # Load the .env file
+load_dotenv()
 
-#from langchain import PromptTemplate
+# Retrieve the API key
+api_key = os.getenv("OPENAI_API_KEY")
+
 
 # create the prompt
 prompt_template: str = """/
@@ -24,11 +25,11 @@ prompt = PromptTemplate.from_template(template=prompt_template)
 prompt_formatted_str: str = prompt.format(
     question="Why won't a vehicle start on ignition?")
 
-# instantiate the OpenAI intance
-llm = OpenAI(temperature = 0.9)
+# instantiate the OpenAI instance
+llm = OpenAI(temperature = 0.9,api_key=api_key)
 
 # make a prediction
-prediction = llm.invoke(prompt_formatted_str)
+prediction = llm.predict(prompt_formatted_str)
 
 # print the prediction
 print(prediction)

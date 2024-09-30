@@ -1,3 +1,4 @@
+# Ensure to import from the new langchain_openai package
 from langchain_openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -7,26 +8,15 @@ load_dotenv()
 
 # Retrieve the API key
 api_key = os.getenv("OPENAI_API_KEY")
-llm=OpenAI(temperature=0.9,api_key=api_key)
 
+# Initialize the LLM with the provided API key and temperature
+llm = OpenAI(temperature=0.9, api_key=api_key)
 
+# Define the prompt
 prompt = "Suggest a good name for a company that produces socks"
 
+# Use the invoke method to get the response
+response = llm.invoke(prompt)
 
-
-print(llm(prompt))
-
-#get a deterministic response with temp = 0
-
-
-
-#generate 5 creative responses using the prompt repeatedly
-
-
-
-responses = llm.generate([prompt]*5)
-
-
-
-for name in responses.generations:
-  print(name[0].text)
+# Print the response
+print(response)
