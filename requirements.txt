@@ -1,2 +1,12 @@
 openai
 python-dotenv
+langchain
+langchain_openai
+langchain_community
+langchain_google_genai 
+streamlit
+google-generativeai
+python-dotenv
+langchain
+chromadb
+faiss-cpu

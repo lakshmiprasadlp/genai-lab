@@ -1,0 +1,27 @@
+Doctor Details 
+1).Doctor name :Vignesh R
+Registation no : 1
+Cabin no :1
+Specialist in ENT
+Available at 1:30 to 4
+
+
+2).Doctor name :Charan G
+Registation no : 2
+Cabin no :2
+Specialist in Urology
+Available at 11:30 to 5
+
+
+3).Doctor name :Vishnu K R
+Registation no : 3
+Cabin no :1
+Specialist in Pathelogy
+Available at 9:30 to 4
+
+
+4).Doctor name :MG Amarnath
+Registation no : 4
+Cabin no :1
+Specialist in gynology
+Available at 1:30 to 4
